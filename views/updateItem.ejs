@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <%- include("./errors/errors.ejs") %>
+    <form action="/item/<%= item.id %>/update" method="post">
+      <label for="categoryname">Category Name:</label>
+      <input
+        type="text"
+        name="categoryname"
+        id="categoryname"
+        value="<%= item.categoryname %>"
+        required
+      />
+      <label for="name">Item Name:</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        value="<%= item.name %>"
+        required
+      />
+      <label for="description">Description:</label>
+      <input
+        type="text"
+        name="description"
+        id="description"
+        value="<%= item.description %>"
+        required
+      />
+      <label for="name">Price:</label>
+      <input
+        type="number"
+        name="price"
+        id="price"
+        value="<%= item.price %>"
+        required
+      />
+      <label for="name">Stock:</label>
+      <input
+        type="number"
+        name="stock"
+        id="stock"
+        value="<%= item.stock %>"
+        required
+      />
+      <button type="submit">Update Item</button>
+    </form>
+    <a href="/category">Back to categories</a>
+  </body>
+</html>

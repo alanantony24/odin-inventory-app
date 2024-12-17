@@ -23,8 +23,9 @@ CREATE TABLE IF NOT EXISTS items (
 INSERT INTO categories (name, description, createdBy, createdOn)
 VALUES ('Clothing', 'Contains clothing items that people enjoy wearing', 'Alan.A', '2024-12-15');
 
-INSERT INTO items (name, categoryName, description, createdBy, createdOn, price, stock)
-VALUES ('Polo Ralph Lauren Polo Tee', 'Clothing', 'The iconic RL Polo-Tee', 'Alan.A', '2024-12-15', 149.99, 50)`;
+INSERT INTO items (categoryName, name, description, createdBy, createdOn, price, stock)
+VALUES ('Clothing', 'Polo Ralph Lauren Polo Tee', 'The iconic RL Polo-Tee', 'Alan.A', '2024-12-15', 149.99, 50);
+`;
 
 async function main() {
   console.log("seeding...");

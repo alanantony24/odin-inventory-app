@@ -7,9 +7,11 @@
   </head>
   <body>
     <h1>Hi this is the items page</h1>
+    <a href="/item/new">Create a new item</a>
     <ul>
       <% items.forEach(item => { %>
       <li><%= item.name %></li>
+      <a href="item/<%= item.id %>/update">Update item</a>
       <%});%>
     </ul>
   </body>

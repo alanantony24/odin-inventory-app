@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
-app.use("/items", itemsRouter);
+app.use("/item", itemsRouter);
 app.use("/category", categoryRouter);
 
 const PORT = 3000;

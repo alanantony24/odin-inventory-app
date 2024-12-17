@@ -41,7 +41,6 @@ async function createCategory(req, res) {
 async function getUpdateCategoryForm(req, res) {
   try {
     const category = await db.getCategoryById(req.params.id); // Add await here
-    console.log(category); // This should now log the category object
     if (!category) {
       return res.status(404).send("Category not found");
     }
