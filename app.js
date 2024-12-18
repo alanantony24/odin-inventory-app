@@ -16,7 +16,7 @@ app.use("/", indexRouter);
 app.use("/item", itemsRouter);
 app.use("/category", categoryRouter);
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });
