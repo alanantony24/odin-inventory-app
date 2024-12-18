@@ -11,10 +11,9 @@ itemsRouter.post(
   itemsController.createItem
 );
 itemsRouter.get("/:id/update", itemsController.getUpdateItemForm);
-itemsRouter.post(
-  "/:id/update",
-  itemsController.validateItems,
-  itemsController.updateItem
+itemsRouter.get(
+  "/:id/delete",
+  itemsController.deleteItem
 );
 
 module.exports = itemsRouter;
