@@ -50,8 +50,7 @@ VALUES ('Electronics', 3, 'PS5', 'PlayStation 5 Console with 1X Controller', 'Ja
 async function main() {
   console.log("seeding...");
   const client = new Client({
-    connectionString:
-      "postgresql://postgres:12345678@localhost:5432/inventorydb",
+    connectionString: process.env.DATABASE_URL,
   });
   await client.connect();
   await client.query(SQL);
